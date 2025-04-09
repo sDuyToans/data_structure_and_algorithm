@@ -12,6 +12,11 @@ public class Main {
         singlyLinkedList.insertInSingleLinkedList(9,0);
         
         // System.out.println(singlyLinkedList.head.next.next.value);
+        // singlyLinkedList.traverseSinglyLinkedList();
+
+        // singlyLinkedList.searchNode(10);
+        singlyLinkedList.traverseSinglyLinkedList();
+        singlyLinkedList.deletionOfNode(0);
         singlyLinkedList.traverseSinglyLinkedList();
     }
 }
