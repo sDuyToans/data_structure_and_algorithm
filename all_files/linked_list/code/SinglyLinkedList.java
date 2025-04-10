@@ -118,4 +118,59 @@ public class SinglyLinkedList {
         this.size = 0;
         System.out.println("The SLL deleted sucessfully");
     }
+
+    // Push - take the value and add to the end of linked list
+    public void push(int value){
+        if (this.head == null) {
+            insertInSingleLinkedList(0, value);
+            return;
+        } else {
+            Node node = new Node();
+            node.value = value;
+            node.next = null;
+            this.tail.next = node;
+            this.tail = node;
+            this.size ++;
+        }
+    }
+
+    // Pop
+    public Node pop(){
+        if (this.head == null) {
+            return null;
+        } else {
+            Node temp = this.tail;
+            deletionOfNode(this.size - 1);
+            return temp;
+        }
+    }
+
+    //Insert
+  public boolean insert(int data, int index) {
+    if (index < 0 || index > this.size) {
+        System.out.println("Location is unvalid!");
+        return false;
+    } else {
+        Node new_node = new Node();
+        new_node.value = data;
+        if (index == 0) {
+            new_node.next = this.head;
+            this.head = new_node;
+        } else if (index == this.size) {
+            new_node.next = null;
+            this.tail.next = new_node;
+            this.tail = new_node;
+        } else {
+            Node temp = this.head;
+            for (int i = 0; i < index - 1; i++){
+                temp = temp.next;
+            }
+            new_node.next = temp.next;
+            temp.next = new_node;
+        }
+        this.size ++;
+        return true;
+    }
+  }
+
 }
