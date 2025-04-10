@@ -16,7 +16,20 @@ public class Main {
 
         // singlyLinkedList.searchNode(10);
         singlyLinkedList.traverseSinglyLinkedList();
-        singlyLinkedList.deletionOfNode(0);
+        // singlyLinkedList.deletionOfNode(0);
+        // singlyLinkedList.traverseSinglyLinkedList();
+
+        singlyLinkedList.push(30);
         singlyLinkedList.traverseSinglyLinkedList();
+
+        singlyLinkedList.pop();
+        singlyLinkedList.traverseSinglyLinkedList();
+        // singlyLinkedList.pop();
+        // singlyLinkedList.traverseSinglyLinkedList();
+        
+        singlyLinkedList.insert(11, 5);
+        singlyLinkedList.traverseSinglyLinkedList();
+
+        
     }
 }
