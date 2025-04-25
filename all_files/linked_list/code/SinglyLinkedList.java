@@ -52,9 +52,9 @@ public class SinglyLinkedList {
             System.out.println("Single Linked List does not exist!");
         } else {
             Node temp = this.head;
-            for (int i = 0; i < this.size; i++) {
+            while (temp != null) {
                 System.out.print(temp.value);
-                if (i != size - 1) {
+                if (temp.next != null) {
                     System.out.print(" -> ");
                 }
                 temp = temp.next;
@@ -80,7 +80,7 @@ public class SinglyLinkedList {
 
     public void deletionOfNode(int location) {
         if (head == null) {
-            System.out.println("Single linkedlist does not exist!");
+            System.out.println("Single linked list does not exist!");
             return;
         } else if (location == 0) {
             head = head.next;
@@ -116,7 +116,7 @@ public class SinglyLinkedList {
         this.head = null;
         this.tail = null;
         this.size = 0;
-        System.out.println("The SLL deleted sucessfully");
+        System.out.println("The SLL deleted successfully");
     }
 
     // Push - take the value and add to the end of linked list
@@ -172,5 +172,7 @@ public class SinglyLinkedList {
         return true;
     }
   }
+
+
 
 }

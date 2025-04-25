@@ -10,7 +10,7 @@ public class Main {
         singlyLinkedList.insertInSingleLinkedList(7, 3);
         singlyLinkedList.insertInSingleLinkedList(8,4);
         singlyLinkedList.insertInSingleLinkedList(9,0);
-        
+
         // System.out.println(singlyLinkedList.head.next.next.value);
         // singlyLinkedList.traverseSinglyLinkedList();
 
@@ -24,12 +24,13 @@ public class Main {
 
         singlyLinkedList.pop();
         singlyLinkedList.traverseSinglyLinkedList();
-        // singlyLinkedList.pop();
+        // singlyLinkedList.pop();wangjoh@sheridan.desire2learn.com
         // singlyLinkedList.traverseSinglyLinkedList();
-        
+
         singlyLinkedList.insert(11, 5);
+        System.out.println(singlyLinkedList.tail.value);
         singlyLinkedList.traverseSinglyLinkedList();
 
-        
+
     }
 }
