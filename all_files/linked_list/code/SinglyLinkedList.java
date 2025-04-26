@@ -271,12 +271,7 @@ public class SinglyLinkedList {
         this.head = null;
         this.tail = null;
         this.size = 0;
-        System.out.println("The SLL deleted sucessfully");
+        System.out.println("The SLL deleted successfully");
     }
-
-  
-
-   
-
 
 }
