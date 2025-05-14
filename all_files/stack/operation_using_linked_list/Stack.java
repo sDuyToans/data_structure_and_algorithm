@@ -33,4 +33,25 @@ public class Stack {
         this.singlyLinkedList.head = null;
         System.out.println("Stack is deleted");
     }
+
+    // isBalanced parenthesis exercises
+    public boolean isBalancedParenthesis(String expression){
+        Stack stack = new Stack();
+        for (int i = 0; i < expression.length(); i++){
+            if (expression.charAt(i) == '(' || expression.charAt(i) == '{' || expression.charAt(i) == '['){
+                stack.push(expression.charAt(i));
+            } else if (expression.charAt(i) == ')' ||  expression.charAt(i) == '}' ||  expression.charAt(i) == ']'){
+                if (stack.isEmpty()){
+                    return false;
+                } else {
+                    if ((expression.charAt(i) == '(' && stack.peek() != '(') || (expression.charAt(i) == '{' && stack.peek() != '{')|| (expression.charAt(i) == '[' && stack.peek() != '[')){
+                        return false;
+                    } else {
+                        stack.pop();
+                    }
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
 }
